@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SinhalaConvert.com</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="/css/main_style.css">
+    <link rel="stylesheet" href="css/main_style.css" />
+    <link href="s.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="SinhalaconvertLk">
+
+        <div class="MainBackground"></div>
+
+        <div class="NavBar">
+            <img class="Logo" src="img/logo.png" alt="Logo" />
+            <div class="NavItem">
+                <a href="index.html" class="Home">Home</a>
+                <a href="aboutus.html" class="Aboutus">AboutUs</a>
+                <a href="./sinhala/Fonts.zip" class="Support">DownloadFonts</a>
+                <a href="contact.html" class="Contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="HeroDiv1">
+            <div class="HeroHeading1">
+                <div class="ImageToSinhalaTextConverter">
+                    <span>Image To Sinhala <br/></span>
+                    <span>Text Converter</span>
+                </div>
+            </div>
+            <div class="HeroHeading2">With Support For Multiple Font And Unicode</div>
+            <div class="UploadImgBtn">
+                <div class="Camera">
+                    <div class="Vector"></div>
+                    <div class="Vector"></div>
+                </div>
+
+                <input type="file" id="upimg" hidden/>
+                <label for="upimg" class="UploadImage">Upload Image</label>
+                <span class="UploadImage_f" id="fileimg">No file chosen</span>
+
+            </div>
+            <div class="ConvertBtn2">
+                <div class="Convert2">Convert</div>
+            </div>
+        </div>
+
+        <div class="HeroDiv2">
+
+            <a href="#" class="UnicodeBtn"> <div class="Unicode">Unicode Font</div> </a>
+
+            <a href="#" class="LegacyBtn"> <div class="Legacy">Legacy Font</div> </a>
+
+            <div class="custom-select" style="width:200px;">
+                <select>
+                  <option value="0">Select a font style:</option>
+                  <option value="1">*Default</option>
+                  <option value="2">FMMalithi</option>
+                  <option value="3">FMsandhyani</option>
+                  <option value="4">FmSamantha</option>
+                  <option value="5">Iskolephotha</option>
+                  <option value="6">FMgamunu</option>
+                  <option value="7">FmAbhaya</option>
+                  <option value="8">FmBasuru</option>
+                  <option value="9">FmBindumathi</option>
+                  <option value="10">FmDerana</option>
+                  <option value="11">FmGanganee</option>
+                  <option value="12">FmRashmee</option>
+                </select>
+            </div>
+
+            <div class="HeroDiv2Bg1">
+
+                <div class="HeroDiv2Bg2">
+                    <form action="file:///C:/Users/ishan/Desktop/sinhala/save.asp" method="post" name="txtBox" id="txtBox" target="sidePane">
+
+                        <script src="gisi.js"></script> 
+		                <script src="sfont.js"></script> 
+
+                        <textarea class="textarea2" readonly="" name="box3" id="box3" rows=12% cols=100% 
+                        style="width: 100%; height: 100%; color: #000000; font-size: 28px; font-family: FMSamantha x; font-weight: 400;"> </textarea>  
+                        <!-- GishanNetSinhala -->
+
+                        <textarea class="textarea1" name="box1" id="box1" onkeyup="startText();startTextSf();saveLocal();" rows=11.2% cols=100% 
+                        style="width: 100%; height: 100%; color: #000000; font-size: 28px; font-family: FMMalithi; font-weight: 400;"></textarea>
+
+                        <textarea readonly="" name="box2" rows="7" id="box2" style="margin: 0px; width: 922px; height: 176px;" /hidden>  </textarea>
+
+                    </form>
+                </div>
+
+                <a href="#" class="VoiceBtn"> <img src="img/microphone.svg" class="Voice"> <div class="Base2"> </div> </a>
+                <a href="#" class="SpeakerBtn"> <img src="img/volume.svg" class="Volume"> <div class="Base1"> </div> </a>
+                <a href="#" class="CopyBtn"> <div class="CopyText">Copy Text</div> </a>
+                <a href="#" class="ClearBtn"> <div class="ClearAll">Clear All</div> </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <h1>Hi hellow</h1>
+
+    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+		// Check browser support
+		if (typeof(Storage) !== "undefined") {
+			document.getElementById("box1").innerHTML = localStorage.getItem("saveSinhala");
+			startText()
+			startTextSf()
+		} else {
+			alert('not support this browser')
+		}
+		
+		function saveLocal() {
+			text1 = document.getElementById("box1").value
+			localStorage.setItem("saveSinhala", text1);
+			console.log('saveSinhala', text1)
+		}
+	</script>	
+
+
+</body>
+</html>
